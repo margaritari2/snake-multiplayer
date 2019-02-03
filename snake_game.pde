@@ -1,4 +1,5 @@
 // by Eleanor Kuchar
+// ignore the placeholder thing; i will delete it once i get multi-snake collisions to work
 
 int w=1300;
 int h=700;
@@ -38,6 +39,7 @@ int windowSizeX = 1300;
 int windowSizeY = 700;
 boolean win1 = false;
 boolean win2 = false;
+boolean placeholder = false;
 
 int color1;
 int color2;
@@ -145,7 +147,7 @@ void checkcollision1() {
     &&snake2Y<=snakes1Y[i]||snake2X+20>=snakes1X[i]&&snake2X+20<=snakes1Y[i]+15&&
     snake2Y+20>=snakes1Y[i]&&snake2Y+20<=snakes1Y[i]+15||snake2X+10>=snakes1X[i]&&
     snake2X+10<=snakes1X[i]+15&&snake2Y+10>=snakes1Y[i]&&snake2Y+10<=snakes1Y[i]+15)
-   {state = 1;}
+    placeholder=true;//{state = 1;}
   }
 }
 void checkcollision2() {
@@ -155,7 +157,7 @@ void checkcollision2() {
     &&snake1Y<=snakes2Y[i]||snake1X+20>=snakes2X[i]&&snake1X+20<=snakes2Y[i]+15&&
     snake1Y+20>=snakes2Y[i]&&snake1Y+20<=snakes2Y[i]+15||snake1X+10>=snakes2X[i]&&
     snake1X+10<=snakes2X[i]+15&&snake1Y+10>=snakes2Y[i]&&snake1Y+10<=snakes2Y[i]+15)
-   {state = 2;}
+   placeholder=true;//{state = 2;}
   }
 }
 
@@ -373,3 +375,4 @@ void keyPressed() {
 
 
 ////////////////////////////////////////////////////////////////////////////////////////
+
